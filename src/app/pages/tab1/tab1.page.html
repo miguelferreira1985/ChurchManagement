@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Iglesia de Dios - El Pañuelo
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <div id="container">
+        <img src="../../assets/images/logotipo-id7.png" />
+        <ion-button (click)="goToProconstructionPage()" style="text-transform: none;" class="text-color" shape="round" expand="block" fill="clear">
+            Proconstrucción {{ proconstructionMoney | currency }}
+        </ion-button>
+        <ion-button (click)="goToProtemplePage()" style="text-transform: none;" class="text-color" shape="round" expand="block" fill="clear">
+            Protemplo {{ protempleMoney | currency }}
+        </ion-button>
+    </div>
+    <app-explore-container name="Iglesia de Dios - El Pañuelo"></app-explore-container>
+</ion-content>

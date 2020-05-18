@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Proconstruccion
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-list>
+            <ion-list-header>
+                Movimientos
+            </ion-list-header>
+            <ion-item *ngFor="let contructionItem of constructionItemList$ | async">
+                {{ contructionItem.enterDate | date:'fullDate' }} {{ contructionItem.amount | currency }}
+            </ion-item>
+        </ion-list>
+    </ion-header>
+
+    <app-explore-container name="Tab 3 page"></app-explore-container>
+</ion-content>

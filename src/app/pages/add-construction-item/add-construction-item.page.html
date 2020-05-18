@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Ingreso Proconstrucción</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form>
+        <ion-item>
+            <ion-label position="floating">Monto</ion-label>
+            <ion-input [(ngModel)]="constructionItem.amount" [ngModelOptions]="{standalone: true}" type="number" placeholder="$0.00 "></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-label position="floating ">Fecha</ion-label>
+            <ion-datetime [(ngModel)]="constructionItem.enterDate " [ngModelOptions]="{standalone: true} " displayFormat=" DD/MM/YYYY " min="2020-01-01 " max="2030-12-31 "></ion-datetime>
+        </ion-item> -->
+        <ion-item>
+            <ion-label position="floating ">Notas</ion-label>
+            <ion-textarea [(ngModel)]="constructionItem.note " [ngModelOptions]="{standalone: true}" rows=" 4 " cols="20 " placeholder="Ingrese alguna nota sobre el ingreso... "></ion-textarea>
+        </ion-item>
+        {{constructionItem.enterDate | date:'dd-MM-yyyy'}}
+        <ion-button (click)="addContructionItem(constructionItem)" pand="block " style="text-transform: none; " shape="round " color="medium ">
+            Agregar
+            <ion-icon slot="start " name="add "></ion-icon>
+        </ion-button>
+    </form>
+</ion-content>
